@@ -10,6 +10,9 @@ pipeline {
     parameters {
         string(name: 'appVersion', defaultValue: '1.1.0', description: 'What is the application version?')
     }
+    environment {
+        def appVersion = ''
+    }
     stages {
         stage('print version') {
             steps {
